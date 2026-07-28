@@ -144,7 +144,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                5+ Years QA Engineering
+                5+ Years In Software QA/QE
               </p>
 
             </div>
@@ -187,7 +187,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                Banking, QRIS, EDC, API
+                Banking & E-Commerce
               </p>
 
             </div>
@@ -230,7 +230,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                Quality Engineering
+                Software & Engineering
               </p>
 
             </div>

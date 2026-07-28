@@ -86,7 +86,7 @@ text-xl
 text-gray-900
 "
         >
-          Galang.dev
+          Portfolio
         </h1>
 
         <div
