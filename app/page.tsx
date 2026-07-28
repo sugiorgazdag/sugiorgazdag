@@ -6,7 +6,7 @@ import Stats from "@/components/sections/Stats";
 
 export default function Home() {
   return (
-    <main>
+    <main className="bg-black text-white">
 
       <Navbar />
 

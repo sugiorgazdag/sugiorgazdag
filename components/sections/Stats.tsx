@@ -1,25 +1,25 @@
-export default function Stats() {
-  const stats = [
-    {
-      label: "Years Experience",
-      value: "5+",
-    },
-    {
-      label: "Projects",
-      value: "20+",
-    },
-    {
-      label: "Companies",
-      value: "3",
-    },
-    {
-      label: "Testing Tools",
-      value: "15+",
-    },
-  ];
+const stats = [
+  {
+    value: "5+",
+    label: "Years Experience",
+  },
+  {
+    value: "20+",
+    label: "Projects",
+  },
+  {
+    value: "15+",
+    label: "Testing Tools",
+  },
+  {
+    value: "100+",
+    label: "Test Cases",
+  },
+];
 
+export default function Stats() {
   return (
-    <section className="py-20">
+    <section className="pb-28">
 
       <div className="max-w-6xl mx-auto px-6">
 
@@ -29,23 +29,42 @@ export default function Stats() {
             <div
               key={item.label}
               className="
+              rounded-3xl
+
               border
-              border-zinc-800
-              rounded-2xl
-              p-6
+              border-white/10
+
+              bg-zinc-900/50
+
+              backdrop-blur-xl
+
+              p-8
+
               text-center
               "
             >
-              <h3 className="text-4xl font-bold text-sky-400">
+              <h3
+                className="
+                text-5xl
+                font-bold
+
+                bg-gradient-to-r
+                from-sky-400
+                via-emerald-400
+                to-pink-400
+
+                bg-clip-text
+                text-transparent
+                "
+              >
                 {item.value}
               </h3>
 
-              <p className="text-zinc-400 mt-2">
+              <p className="text-zinc-400 mt-3">
                 {item.label}
               </p>
             </div>
           ))}
-
         </div>
 
       </div>

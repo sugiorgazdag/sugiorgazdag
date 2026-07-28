@@ -1,6 +1,6 @@
 "use client";
 
-const navItems = [
+const menus = [
   {
     label: "About",
     href: "#about",
@@ -32,33 +32,34 @@ export default function Navbar() {
       left-0
       right-0
       z-50
-      backdrop-blur-md
+      backdrop-blur-xl
       bg-black/40
       border-b
-      border-zinc-800
+      border-white/10
       "
     >
-      <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-7xl mx-auto px-6 py-5">
 
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between items-center">
 
           <h1 className="font-bold text-xl">
-            Galang<span className="text-sky-400">.</span>
+            Galang
+            <span className="text-sky-400">.</span>
           </h1>
 
           <nav className="hidden md:flex gap-8">
 
-            {navItems.map((item) => (
+            {menus.map((menu) => (
               <a
-                key={item.label}
-                href={item.href}
+                key={menu.label}
+                href={menu.href}
                 className="
                 text-zinc-400
-                hover:text-white
+                hover:text-sky-400
                 transition
                 "
               >
-                {item.label}
+                {menu.label}
               </a>
             ))}
 
