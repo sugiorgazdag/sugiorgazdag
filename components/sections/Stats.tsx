@@ -1,74 +1,112 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const stats = [
   {
-    value: "5+",
+    number: "5+",
     label: "Years Experience",
   },
+
   {
-    value: "20+",
-    label: "Projects",
+    number: "1000+",
+    label: "Test Cases Executed",
   },
+
   {
-    value: "15+",
-    label: "Testing Tools",
+    number: "20+",
+    label: "Features Tested",
   },
+
   {
-    value: "100+",
-    label: "Test Cases",
+    number: "10+",
+    label: "QA Tools",
   },
 ];
 
 export default function Stats() {
   return (
-    <section className="pb-28">
+    <section
+      className="
+py-20
+px-6
+"
+    >
+      <div
+        className="
+max-w-6xl
 
-      <div className="max-w-6xl mx-auto px-6">
+mx-auto
 
-        <div className="grid md:grid-cols-4 gap-6">
+grid
 
-          {stats.map((item) => (
-            <div
-              key={item.label}
+grid-cols-2
+
+md:grid-cols-4
+
+gap-6
+"
+      >
+        {stats.map((item, index) => (
+          <motion.div
+            key={item.label}
+            initial={{
+              opacity: 0,
+              y: 30,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              once: true,
+            }}
+            transition={{
+              delay: index * 0.1,
+            }}
+            className="
+rounded-2xl
+
+bg-white
+
+border
+border-gray-200
+
+shadow-lg
+
+p-6
+
+text-center
+
+hover:-translate-y-2
+
+transition
+"
+          >
+            <h3
               className="
-              rounded-3xl
+text-4xl
 
-              border
-              border-white/10
+font-bold
 
-              bg-zinc-900/50
-
-              backdrop-blur-xl
-
-              p-8
-
-              text-center
-              "
+text-sky-500
+"
             >
-              <h3
-                className="
-                text-5xl
-                font-bold
+              {item.number}
+            </h3>
 
-                bg-gradient-to-r
-                from-sky-400
-                via-emerald-400
-                to-pink-400
+            <p
+              className="
+mt-3
 
-                bg-clip-text
-                text-transparent
-                "
-              >
-                {item.value}
-              </h3>
-
-              <p className="text-zinc-400 mt-3">
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
-
+text-gray-600
+"
+            >
+              {item.label}
+            </p>
+          </motion.div>
+        ))}
       </div>
-
     </section>
   );
 }

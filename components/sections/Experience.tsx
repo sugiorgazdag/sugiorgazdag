@@ -1,73 +1,135 @@
-import { experiences } from "@/data/experience";
+"use client";
+
+import { motion } from "framer-motion";
+
+const experiences = [
+  {
+    company: "BRI",
+    role: "Software Quality Assurance Engineer",
+    desc: "Testing banking ecosystem including MMS, QRIS, EDC, API integration, regression testing and automation.",
+  },
+
+  {
+    company: "E-Commerce Platform",
+    role: "QA Engineer",
+    desc: "Performed functional testing, API validation, UI testing and quality improvement for digital products.",
+  },
+];
 
 export default function Experience() {
   return (
     <section
       id="experience"
-      className="py-28"
+      className="
+py-24
+px-6
+"
     >
-      <div className="max-w-6xl mx-auto px-6">
-
-        <h2 className="text-4xl font-bold mb-12">
-          Work Experience
+      <div
+        className="
+max-w-5xl
+mx-auto
+"
+      >
+        <h2
+          className="
+text-4xl
+font-bold
+text-gray-900
+mb-12
+"
+        >
+          Experience
         </h2>
 
-        <div className="space-y-8">
-
-          {experiences.map((experience) => (
-            <div
-              key={experience.company}
+        <div
+          className="
+space-y-8
+"
+        >
+          {experiences.map((item, index) => (
+            <motion.div
+              key={item.company}
+              initial={{
+                opacity: 0,
+                x: -30,
+              }}
+              whileInView={{
+                opacity: 1,
+                x: 0,
+              }}
+              viewport={{
+                once: true,
+              }}
               className="
-              rounded-3xl
-              border
-              border-white/10
-              bg-zinc-900/50
-              backdrop-blur-xl
-              p-8
-              "
+relative
+
+rounded-3xl
+
+bg-white
+
+border
+
+border-gray-200
+
+shadow-lg
+
+p-8
+"
             >
-              <div className="flex flex-col md:flex-row md:justify-between">
+              <div
+                className="
+absolute
 
-                <div>
+-left-3
 
-                  <h3 className="text-2xl font-bold">
-                    {experience.role}
-                  </h3>
+top-8
 
-                  <p className="text-sky-400 mt-2">
-                    {experience.company}
-                  </p>
+w-6
+h-6
 
-                </div>
+rounded-full
 
-                <span className="text-zinc-400">
-                  {experience.period}
-                </span>
+bg-sky-500
+"
+              />
 
-              </div>
+              <h3
+                className="
+text-2xl
+font-bold
+text-gray-900
+"
+              >
+                {item.company}
+              </h3>
 
-              <p className="text-zinc-400 mt-6">
-                {experience.description}
+              <p
+                className="
+text-sky-500
+
+font-medium
+
+mt-2
+"
+              >
+                {item.role}
               </p>
 
-              <ul className="mt-6 space-y-3">
+              <p
+                className="
+mt-4
 
-                {experience.achievements.map((item) => (
-                  <li
-                    key={item}
-                    className="text-zinc-300"
-                  >
-                    • {item}
-                  </li>
-                ))}
+text-gray-600
 
-              </ul>
-
-            </div>
+leading-relaxed
+"
+              >
+                {item.desc}
+              </p>
+            </motion.div>
           ))}
-
         </div>
-
       </div>
     </section>
   );

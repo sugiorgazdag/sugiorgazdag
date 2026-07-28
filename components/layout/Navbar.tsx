@@ -1,73 +1,118 @@
 "use client";
 
-const menus = [
+import { useEffect, useState } from "react";
+
+const navItems = [
   {
-    label: "About",
+    name: "About",
     href: "#about",
   },
+
   {
-    label: "Skills",
-    href: "#skills",
-  },
-  {
-    label: "Experience",
+    name: "Experience",
     href: "#experience",
   },
+
   {
-    label: "Projects",
+    name: "Skills",
+    href: "#skills",
+  },
+
+  {
+    name: "Projects",
     href: "#projects",
   },
+
   {
-    label: "Contact",
+    name: "Contact",
     href: "#contact",
   },
 ];
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header
-      className="
-      fixed
-      top-0
-      left-0
-      right-0
-      z-50
-      backdrop-blur-xl
-      bg-black/40
-      border-b
-      border-white/10
-      "
+      className={`
+fixed
+top-0
+left-0
+
+w-full
+
+z-50
+
+transition-all
+duration-300
+
+${
+  scrolled
+    ? "bg-white/80 backdrop-blur-xl border-b border-gray-200 shadow-sm"
+    : "bg-transparent"
+}
+
+`}
     >
-      <div className="max-w-7xl mx-auto px-6 py-5">
+      <nav
+        className="
+max-w-6xl
+mx-auto
 
-        <div className="flex justify-between items-center">
+px-6
+py-5
 
-          <h1 className="font-bold text-xl">
-            Galang
-            <span className="text-sky-400">.</span>
-          </h1>
+flex
+items-center
+justify-between
+"
+      >
+        <h1
+          className="
+font-bold
+text-xl
+text-gray-900
+"
+        >
+          Galang.dev
+        </h1>
 
-          <nav className="hidden md:flex gap-8">
+        <div
+          className="
+hidden
+md:flex
+gap-8
+"
+        >
+          {navItems.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              className="
+text-gray-600
 
-            {menus.map((menu) => (
-              <a
-                key={menu.label}
-                href={menu.href}
-                className="
-                text-zinc-400
-                hover:text-sky-400
-                transition
-                "
-              >
-                {menu.label}
-              </a>
-            ))}
+hover:text-sky-500
 
-          </nav>
-
+transition
+"
+            >
+              {item.name}
+            </a>
+          ))}
         </div>
-
-      </div>
+      </nav>
     </header>
   );
 }
