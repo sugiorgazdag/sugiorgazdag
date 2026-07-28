@@ -1,51 +1,76 @@
 export const projects = [
   {
     title: "Merchant Management System (MMS)",
-    company: "PT Bank Rakyat Indonesia",
+    company: "PT Bank Rakyat Indonesia (Persero) Tbk",
 
     description:
-      "Internal banking application used for merchant onboarding, merchant maintenance, QRIS management, and EDC management.",
+      "Contributed to the development and quality assurance of Merchant Management System (MMS), supporting merchant onboarding, merchant maintenance, QRIS management, and EDC operations across Bank BRI Head Office and Branch Offices.",
+
+    highlights: [
+      "System Integration Testing (SIT)",
+      "User Acceptance Testing (UAT)",
+      "Regression Testing",
+      "End-to-End Testing",
+      "Merchant Onboarding Validation",
+      "Deployment Verification",
+    ],
 
     technologies: [
-      "Manual Testing",
-      "SIT",
-      "UAT",
-      "API Testing",
-      "SQL",
       "Jira",
+      "Postman",
+      "SQL",
+      "Agile",
+      "Manual Testing",
     ],
   },
 
   {
     title: "Tokopedia ↔ TikTok Shop Integration",
 
-    company: "ByteDance",
+    company: "ByteDance Technology Co., Ltd.",
 
     description:
-      "Data synchronization and feature migration between Tokopedia and TikTok Shop ecosystems.",
+      "Supported migration and integration initiatives between Tokopedia and TikTok Shop, ensuring data synchronization, feature consistency, and smooth user experience across both ecosystems.",
+
+    highlights: [
+      "Integration Testing",
+      "Feature Migration Validation",
+      "Data Synchronization Testing",
+      "Regression Testing",
+      "Buyer Journey Validation",
+    ],
 
     technologies: [
-      "Regression Testing",
-      "Integration Testing",
       "Lark",
-      "API Validation",
+      "API Testing",
+      "Regression Testing",
+      "Manual Testing",
     ],
   },
 
   {
-    title: "Consumer E-Commerce Platform",
+    title: "GoTo E-Commerce Platform",
 
-    company: "GoTo",
+    company: "PT GoTo Gojek Tokopedia Tbk",
 
     description:
-      "Testing web, Android, iOS, and Mobile Lite applications including checkout, voucher, and user experience features.",
+      "Performed comprehensive testing for Web, Mobile Lite, Android, and iOS applications, focusing on customer-facing features and platform stability.",
+
+    highlights: [
+      "Smoke Testing",
+      "Regression Testing",
+      "UAT",
+      "Cross-Platform Testing",
+      "Bug Verification",
+      "Release Validation",
+    ],
 
     technologies: [
-      "Manual Testing",
-      "Regression",
-      "UAT",
-      "Postman",
       "Jira",
+      "Confluence",
+      "Postman",
+      "Figma",
+      "Manual Testing",
     ],
   },
 ];
