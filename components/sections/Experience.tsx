@@ -6,6 +6,7 @@ const experiences = [
   {
     company: "PT Bank Rakyat Indonesia (Persero) Tbk",
     role: "Software Quality Assurance Engineer",
+    period: "Aug 2024 – Present",
     desc: [
       "Contributed to the development of internal applications for Bank BRI’s Head Office and Branch Offices, focusing on the Merchant Management System (MMS) to support operational efficiency.",
       "Executed deployment processes for newly developed features and bug fixes, ensuring successful and stable rollout to staging and production environments.",
@@ -19,6 +20,7 @@ const experiences = [
   {
     company: "ByteDance Technology Co., Ltd.",
     role: "Software Quality Assurance Tester",
+    period: "Jan 2024 – Jun 2024",
     desc: [
       "Conducted data integration testing between Tokopedia applications and TikTok Shop to ensure seamless synchronization and data consistency across platforms.",
       "Performed functional and regression testing on delivery-related services such as BO/PLUS, free shipping vouchers, and visual delivery badges to verify correct implementation and user experience.",
@@ -31,6 +33,7 @@ const experiences = [
   {
     company: "PT GoTo Gojek Tokopedia Tbk (GoTo)",
     role: "Software Quality Assurance Tester",
+    period: "Aug 2021 – Dec 2023",
     desc: [
       "Reviewed and analyzed Product Requirement Documents (PRD) and Business Requirement Documents (BRD) to develop and execute effective testing strategies.",
       "Designed and maintained detailed test documentation, including test cases, test scenarios, test plans, and execution reports tailored to project requirements.",
@@ -46,34 +49,22 @@ export default function Experience() {
   return (
     <section
       id="experience"
-      className="
-py-24
-px-6
-"
+      className="py-24 px-6"
     >
-      <div
-        className="
-max-w-5xl
-mx-auto
-"
-      >
+      <div className="max-w-5xl mx-auto">
         <h2
           className="
-text-4xl
-font-bold
-text-gray-900
-mb-12
-"
+            text-4xl
+            font-bold
+            text-gray-900
+            mb-12
+          "
         >
           Experience
         </h2>
 
-        <div
-          className="
-space-y-8
-"
-        >
-          {experiences.map((item, index) => (
+        <div className="space-y-8">
+          {experiences.map((item) => (
             <motion.div
               key={item.company}
               initial={{
@@ -87,63 +78,75 @@ space-y-8
               viewport={{
                 once: true,
               }}
+              transition={{
+                duration: 0.5,
+              }}
               className="
-relative
-
-rounded-3xl
-
-bg-white
-
-border
-
-border-gray-200
-
-shadow-lg
-
-p-8
-"
+                relative
+                rounded-3xl
+                bg-white
+                border
+                border-gray-200
+                shadow-lg
+                p-8
+              "
             >
               <div
                 className="
-absolute
-
--left-3
-
-top-8
-
-w-6
-h-6
-
-rounded-full
-
-bg-sky-500
-"
+                  absolute
+                  -left-3
+                  top-8
+                  w-6
+                  h-6
+                  rounded-full
+                  bg-sky-500
+                "
               />
 
               <h3
                 className="
-text-2xl
-font-bold
-text-gray-900
-"
+                  text-2xl
+                  font-bold
+                  text-gray-900
+                "
               >
                 {item.company}
               </h3>
 
+              <p
+                className="
+                  text-sky-500
+                  font-semibold
+                  mt-2
+                "
+              >
+                {item.role}
+              </p>
+
+              <p
+                className="
+                  text-sm
+                  text-gray-500
+                  mt-1
+                "
+              >
+                {item.period}
+              </p>
+
               <ul
-  className="
-mt-4
-list-disc
-pl-5
-space-y-2
-text-gray-600
-leading-relaxed
-"
->
-  {item.desc.map((descItem, idx) => (
-    <li key={idx}>{descItem}</li>
-  ))}
-</ul>
+                className="
+                  mt-5
+                  list-disc
+                  pl-5
+                  space-y-2
+                  text-gray-600
+                  leading-relaxed
+                "
+              >
+                {item.desc.map((descItem, idx) => (
+                  <li key={idx}>{descItem}</li>
+                ))}
+              </ul>
             </motion.div>
           ))}
         </div>
