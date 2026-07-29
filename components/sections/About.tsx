@@ -48,10 +48,7 @@ export default function About() {
           >
             I am a Software Quality Assurance Engineer with 5+ years of
             experience helping teams deliver reliable and user-focused digital
-            products.
-            <br />
-            <br />
-            My professional journey includes working with organizations such as
+            products. My professional journey includes working with organizations such as
             BRI, GoTo, and ByteDance, where I contributed to Banking, Fintech,
             and E-Commerce platforms through comprehensive quality assurance
             practices.

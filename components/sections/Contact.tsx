@@ -15,6 +15,9 @@ export default function Contact() {
     transition-all
     duration-300
     hover:-translate-y-2
+    hover:border-sky-300
+    hover:shadow-xl
+    hover:shadow-sky-100
   `;
 
   const buttonClass = `
@@ -28,11 +31,16 @@ export default function Contact() {
     px-6
     py-3
     font-medium
+    text-gray-700
     transition-all
     duration-300
     hover:-translate-y-1
-    hover:bg-sky-50
-    hover:border-sky-300
+    hover:scale-105
+    hover:bg-sky-500
+    hover:text-white
+    hover:border-sky-500
+    hover:shadow-xl
+    hover:shadow-sky-300/50
   `;
 
   return (
@@ -100,15 +108,17 @@ export default function Contact() {
               gap-4
             "
           >
+            {/* Download CV */}
             <a
-              href="/cv.pdf"
-              download
+              href="/documents/galangekw.pdf"
+              download="Galang_Eka_Wiyono_CV.pdf"
               className={buttonClass}
             >
               <Download size={18} />
               Download CV
             </a>
 
+            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/galangekw/"
               target="_blank"
@@ -119,6 +129,7 @@ export default function Contact() {
               LinkedIn
             </a>
 
+            {/* GitHub */}
             <a
               href="https://github.com/galangekawiyono"
               target="_blank"
@@ -129,6 +140,7 @@ export default function Contact() {
               GitHub
             </a>
 
+            {/* Email */}
             <a
               href="mailto:ggalangekawiyonoo@gmail.com"
               className={buttonClass}

@@ -4,179 +4,152 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hero() {
+  const buttonClass = `
+    flex
+    items-center
+    justify-center
+    gap-2
+    rounded-full
+    bg-gray-50
+    border
+    border-gray-200
+    px-6
+    py-3
+    font-medium
+    text-gray-700
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:scale-105
+    hover:bg-sky-500
+    hover:text-white
+    hover:border-sky-500
+    hover:shadow-xl
+    hover:shadow-sky-300/50
+  `;
+
   return (
     <section
       className="
-min-h-screen
-flex
-items-center
-px-6
-pt-24
-"
+        min-h-screen
+        flex
+        items-center
+        px-6
+        pt-24
+      "
     >
       <div
         className="
-max-w-6xl
-mx-auto
-
-grid
-md:grid-cols-2
-
-gap-12
-
-items-center
-"
+          max-w-6xl
+          mx-auto
+          grid
+          md:grid-cols-2
+          gap-12
+          items-center
+        "
       >
+        {/* Left Side */}
         <motion.div
-          initial={{
-            opacity: 0,
-            x: -40,
-          }}
-          animate={{
-            opacity: 1,
-            x: 0,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
+          initial={{ opacity: 0, x: -40 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
         >
           <p
             className="
-text-sky-500
-font-semibold
-mb-4
-"
+              text-sky-500
+              font-semibold
+              mb-4
+            "
           >
             Software Quality Assurance Engineer
           </p>
 
           <h1
             className="
-text-5xl
-md:text-6xl
-
-font-bold
-
-text-gray-900
-
-leading-tight
-"
+              text-5xl
+              md:text-6xl
+              font-bold
+              text-gray-900
+              leading-tight
+            "
           >
             Galang Eka Wiyono
           </h1>
-<p
-  className="
-mt-6
-text-lg
-text-gray-600
-leading-relaxed
-text-justify
-"
->
-  Software Quality Assurance Engineer with 5+ years of experience
-  delivering reliable digital products across Banking &
-  E-Commerce industries. Passionate about ensuring quality, improving
-  user experience, and supporting teams in building scalable solutions.
-</p>
+
+          <p
+            className="
+              mt-6
+              max-w-xl
+              text-lg
+              text-gray-600
+              leading-8
+              text-justify
+            "
+          >
+            Software Quality Assurance Engineer with 5+ years of experience
+            delivering reliable digital products across Banking and
+            E-Commerce industries. Passionate about ensuring quality,
+            improving user experience, and supporting teams in building
+            scalable solutions.
+          </p>
+
           <div
             className="
-flex
-gap-4
-
-mt-8
-"
+              flex
+              mt-8
+            "
           >
             <a
               href="#contact"
-              className="
-rounded-full
-
-bg-sky-500
-
-text-white
-
-px-7
-py-3
-
-font-semibold
-
-hover:bg-sky-600
-
-transition
-"
+              className={buttonClass}
             >
               Let's Connect
-            </a>
-
-            <a
-              href="/cv.pdf"
-              download
-              className="
-rounded-full
-
-border
-
-border-gray-300
-
-px-7
-py-3
-
-font-semibold
-
-text-gray-700
-
-hover:bg-gray-100
-
-transition
-"
-            >
-              Download CV
             </a>
           </div>
         </motion.div>
 
+        {/* Right Side */}
         <motion.div
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          transition={{
-            duration: 0.6,
-          }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6 }}
           className="
-flex
-justify-center
-"
+            flex
+            justify-center
+          "
         >
           <div
             className="
-relative
-
-w-72
-h-72
-
-rounded-3xl
-
-overflow-hidden
-
-border
-
-border-gray-200
-
-shadow-2xl
-"
+              group
+              relative
+              w-full
+              max-w-sm
+              aspect-square
+              overflow-hidden
+              rounded-3xl
+              border
+              border-gray-200
+              shadow-2xl
+              transition-all
+              duration-300
+              hover:border-sky-400
+              hover:shadow-xl
+              hover:shadow-sky-300/40
+            "
           >
             <Image
-              src="/images/profile.png"
+              src="/images/galangekw.png"
               alt="Galang Eka Wiyono"
               fill
+              priority
+              sizes="(max-width: 768px) 80vw, 400px"
               className="
-object-cover
-"
+                object-cover
+                object-center
+                transition-transform
+                duration-500
+                group-hover:scale-110
+              "
             />
           </div>
         </motion.div>
