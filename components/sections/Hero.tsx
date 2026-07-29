@@ -62,25 +62,22 @@ text-gray-900
 leading-tight
 "
           >
-            Building Reliable Software Through Quality Engineering
+            Galang Eka Wiyono
           </h1>
-
-          <p
-            className="
+<p
+  className="
 mt-6
-
 text-lg
-
 text-gray-600
-
 leading-relaxed
+text-justify
 "
-          >
-            Experienced QA Engineer with 5+ years of experience in manual
-            testing, automation testing, API testing, and banking digital
-            platform quality assurance.
-          </p>
-
+>
+  Software Quality Assurance Engineer with 5+ years of experience
+  delivering reliable digital products across Banking &
+  E-Commerce industries. Passionate about ensuring quality, improving
+  user experience, and supporting teams in building scalable solutions.
+</p>
           <div
             className="
 flex

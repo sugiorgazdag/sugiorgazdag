@@ -1,26 +1,46 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-
 import { Download } from "lucide-react";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
+  const infoCardClass = `
+    rounded-2xl
+    bg-gray-50
+    border
+    border-gray-200
+    p-6
+    text-center
+    transition-all
+    duration-300
+    hover:-translate-y-2
+  `;
+
+  const buttonClass = `
+    flex
+    items-center
+    gap-2
+    rounded-full
+    bg-gray-50
+    border
+    border-gray-200
+    px-6
+    py-3
+    font-medium
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:bg-sky-50
+    hover:border-sky-300
+  `;
+
   return (
     <section
       id="contact"
-      className="
-        py-24
-        px-6
-      "
+      className="py-24 px-6"
     >
-      <div
-        className="
-          max-w-5xl
-          mx-auto
-        "
-      >
+      <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{
             opacity: 0,
@@ -37,24 +57,20 @@ export default function Contact() {
             duration: 0.5,
           }}
           className="
-rounded-3xl
-
-bg-white
-
-border
-border-gray-200
-
-shadow-xl
-
-p-10
-
-text-center
-"
+            rounded-3xl
+            bg-white
+            border
+            border-gray-200
+            shadow-xl
+            p-10
+            text-center
+          "
         >
           <h2
             className="
               text-4xl
               font-bold
+              text-gray-900
             "
           >
             Let's Work Together
@@ -63,111 +79,59 @@ text-center
           <p
             className="
               mt-5
-              text-gray-600
               max-w-2xl
               mx-auto
+              text-gray-600
+              leading-relaxed
             "
           >
-            Interested in building reliable software with quality engineering?
-            Let's connect and discuss how I can help improve your product
-            quality.
+            Interested in collaborating on quality-driven software
+            projects? Feel free to connect with me to discuss Quality
+            Assurance, testing strategies, and opportunities to build
+            reliable digital products.
           </p>
 
           <div
             className="
+              mt-8
               flex
               flex-wrap
               justify-center
               gap-4
-              mt-8
             "
           >
-            {/* Download CV */}
-
             <a
               href="/cv.pdf"
               download
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-gray-200
-                px-6
-                py-3
-                hover:bg-sky-400
-                hover:border-gray-50
-                transition
-              "
+              className={buttonClass}
             >
               <Download size={18} />
               Download CV
             </a>
-            {/* LinkedIn */}
+
             <a
               href="https://www.linkedin.com/in/galangekw/"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-gray-200
-                px-6
-                py-3
-                hover:bg-sky-400
-                hover:border-gray-50
-                transition
-              "
+              className={buttonClass}
             >
               <FaLinkedin size={18} />
               LinkedIn
             </a>
 
-            {/* GitHub */}
-
             <a
-              href="https://github.com/"
+              href="https://github.com/galangekawiyono"
               target="_blank"
               rel="noopener noreferrer"
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-gray-200
-                px-6
-                py-3
-                hover:bg-sky-400
-                hover:border-gray-50
-                transition
-              "
+              className={buttonClass}
             >
               <FaGithub size={18} />
               GitHub
             </a>
 
-            {/* Email */}
-
             <a
               href="mailto:ggalangekawiyonoo@gmail.com"
-              className="
-                flex
-                items-center
-                gap-2
-                rounded-full
-                border
-                border-gray-200
-                px-6
-                py-3
-                hover:bg-sky-400
-                hover:border-gray-50
-                transition
-              "
+              className={buttonClass}
             >
               <FaEnvelope size={18} />
               Email
@@ -176,28 +140,17 @@ text-center
 
           <div
             className="
-              grid
-              md:grid-cols-2
-              gap-6
               mt-12
-              text-left
+              grid
+              gap-6
+              md:grid-cols-2
             "
           >
-            <div
-              className="
-rounded-3xl
-bg-white
-border
-border-gray-100
-shadow-xl
-p-10
-text-center
-"
-            >
+            <div className={infoCardClass}>
               <p
                 className="
-                  text-gray-600
                   text-sm
+                  text-gray-600
                 "
               >
                 Email
@@ -207,6 +160,7 @@ text-center
                 className="
                   mt-2
                   font-medium
+                  text-gray-900
                   break-all
                 "
               >
@@ -214,21 +168,11 @@ text-center
               </p>
             </div>
 
-            <div
-              className="
-rounded-3xl
-bg-white
-border
-border-gray-100
-shadow-xl
-p-10
-text-center
-"
-            >
+            <div className={infoCardClass}>
               <p
                 className="
-                  text-gray-600
                   text-sm
+                  text-gray-600
                 "
               >
                 Availability
@@ -238,6 +182,7 @@ text-center
                 className="
                   mt-2
                   font-medium
+                  text-gray-900
                 "
               >
                 Open for QA Engineer Opportunities
