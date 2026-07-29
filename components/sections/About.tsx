@@ -68,8 +68,6 @@ export default function About() {
             About Me
           </h2>
 
-
-
           <p
             className="
               mt-6
@@ -82,18 +80,13 @@ export default function About() {
             "
           >
 
-            Experienced Software Quality Assurance Engineer with
-            5+ years of experience in manual testing,
-            automation testing, API testing, and quality
-            engineering for banking and digital payment systems.
+            Experienced Software Quality Assurance Engineer with 5+ years of experience in Manual Testing,
+            Automation Testing, Software Development, and Quality Engineering for banking and digital payment systems.
 
-            Specialized in improving software reliability,
-            test strategy, regression testing, and Agile
-            software development lifecycle.
+            Specialized in improving Software Reliability, Test Strategy, Testing, and Agile
+            Software Development Lifecycle.
 
           </p>
-
-
 
           <div
             className="
@@ -144,7 +137,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                5+ Years In Software QA/QE
+                5+ Years in Software QA/QE Banking System & E-Commerce
               </p>
 
             </div>
@@ -187,7 +180,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                Banking & E-Commerce
+                Banking System, Merchant Platform & E-Commerce
               </p>
 
             </div>
@@ -230,7 +223,7 @@ export default function About() {
                   text-gray-600
                 "
               >
-                Software & Engineering
+                Software Quality Assurance Engineering
               </p>
 
             </div>

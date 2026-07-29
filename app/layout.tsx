@@ -17,18 +17,14 @@ export const metadata: Metadata = {
 
 
   description:
-  "Software Quality Assurance Engineer specializing in Banking System, QRIS, Automation Testing, API Testing and Quality Engineering.",
+  "Software Quality Assurance Engineer specializing in Banking System, Merchant, Automation Testing, API Testing and Quality Engineering.",
 
 
   keywords:[
     "QA Engineer",
     "Software Tester",
     "Automation Testing",
-    "Playwright",
-    "Cypress",
-    "Selenium",
-    "QRIS",
-    "Banking System"
+    "Manual Testing",
   ],
 
 
@@ -38,7 +34,7 @@ export const metadata: Metadata = {
     "Galang Eka Wiyono | Software QA Engineer",
 
     description:
-    "5+ Years Experience in Quality Assurance Engineering.",
+    "5+ Years Experience in Software Quality Assurance Engineering.",
 
     type:"website"
 

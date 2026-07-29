@@ -2,21 +2,12 @@
 
 import { motion } from "framer-motion";
 
-import {
-  FaLinkedin,
-  FaGithub,
-  FaEnvelope
-} from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 
-import {
-  Download
-} from "lucide-react";
-
+import { Download } from "lucide-react";
 
 export default function Contact() {
-
   return (
-
     <section
       id="contact"
       className="
@@ -24,47 +15,42 @@ export default function Contact() {
         px-6
       "
     >
-
       <div
         className="
           max-w-5xl
           mx-auto
         "
       >
-
         <motion.div
-
           initial={{
             opacity: 0,
-            y: 40
+            y: 40,
           }}
-
           whileInView={{
             opacity: 1,
-            y: 0
+            y: 0,
           }}
-
           viewport={{
-            once: true
+            once: true,
           }}
-
           transition={{
-            duration: 0.5
+            duration: 0.5,
           }}
-
           className="
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/5
-            backdrop-blur-xl
-            p-10
-            text-center
-          "
+rounded-3xl
 
+bg-white
+
+border
+border-gray-200
+
+shadow-xl
+
+p-10
+
+text-center
+"
         >
-
-
           <h2
             className="
               text-4xl
@@ -74,23 +60,18 @@ export default function Contact() {
             Let's Work Together
           </h2>
 
-
-
           <p
             className="
               mt-5
-              text-gray-300
+              text-gray-600
               max-w-2xl
               mx-auto
             "
           >
-            Interested in building reliable software
-            with quality engineering?
-            Let's connect and discuss how I can
-            help improve your product quality.
+            Interested in building reliable software with quality engineering?
+            Let's connect and discuss how I can help improve your product
+            quality.
           </p>
-
-
 
           <div
             className="
@@ -101,8 +82,6 @@ export default function Contact() {
               mt-8
             "
           >
-
-
             {/* Download CV */}
 
             <a
@@ -113,26 +92,19 @@ export default function Contact() {
                 items-center
                 gap-2
                 rounded-full
-                bg-sky-500
+                border
+                border-gray-200
                 px-6
                 py-3
-                font-semibold
                 hover:bg-sky-400
+                hover:border-gray-50
                 transition
               "
             >
-
-              <Download size={18}/>
-
+              <Download size={18} />
               Download CV
-
             </a>
-
-
-
-
             {/* LinkedIn */}
-
             <a
               href="https://www.linkedin.com/in/galangekw/"
               target="_blank"
@@ -143,22 +115,17 @@ export default function Contact() {
                 gap-2
                 rounded-full
                 border
-                border-white/20
+                border-gray-200
                 px-6
                 py-3
-                hover:bg-white/10
+                hover:bg-sky-400
+                hover:border-gray-50
                 transition
               "
             >
-
-              <FaLinkedin size={18}/>
-
+              <FaLinkedin size={18} />
               LinkedIn
-
             </a>
-
-
-
 
             {/* GitHub */}
 
@@ -172,22 +139,17 @@ export default function Contact() {
                 gap-2
                 rounded-full
                 border
-                border-white/20
+                border-gray-200
                 px-6
                 py-3
-                hover:bg-white/10
+                hover:bg-sky-400
+                hover:border-gray-50
                 transition
               "
             >
-
-              <FaGithub size={18}/>
-
+              <FaGithub size={18} />
               GitHub
-
             </a>
-
-
-
 
             {/* Email */}
 
@@ -199,26 +161,18 @@ export default function Contact() {
                 gap-2
                 rounded-full
                 border
-                border-white/20
+                border-gray-200
                 px-6
                 py-3
-                hover:bg-white/10
+                hover:bg-sky-400
+                hover:border-gray-50
                 transition
               "
             >
-
-              <FaEnvelope size={18}/>
-
+              <FaEnvelope size={18} />
               Email
-
             </a>
-
-
           </div>
-
-
-
-
 
           <div
             className="
@@ -229,26 +183,25 @@ export default function Contact() {
               text-left
             "
           >
-
-
-
             <div
               className="
-                rounded-xl
-                bg-black/30
-                p-5
-              "
+rounded-3xl
+bg-white
+border
+border-gray-100
+shadow-xl
+p-10
+text-center
+"
             >
-
               <p
                 className="
-                  text-gray-400
+                  text-gray-600
                   text-sm
                 "
               >
                 Email
               </p>
-
 
               <p
                 className="
@@ -259,31 +212,27 @@ export default function Contact() {
               >
                 ggalangekawiyonoo@gmail.com
               </p>
-
-
             </div>
-
-
-
-
 
             <div
               className="
-                rounded-xl
-                bg-black/30
-                p-5
-              "
+rounded-3xl
+bg-white
+border
+border-gray-100
+shadow-xl
+p-10
+text-center
+"
             >
-
               <p
                 className="
-                  text-gray-400
+                  text-gray-600
                   text-sm
                 "
               >
                 Availability
               </p>
-
 
               <p
                 className="
@@ -293,23 +242,10 @@ export default function Contact() {
               >
                 Open for QA Engineer Opportunities
               </p>
-
-
             </div>
-
-
           </div>
-
-
-
         </motion.div>
-
-
       </div>
-
-
     </section>
-
   );
-
 }

@@ -4,16 +4,42 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    company: "BRI",
+    company: "PT Bank Rakyat Indonesia (Persero) Tbk",
     role: "Software Quality Assurance Engineer",
-    desc: "Testing banking ecosystem including MMS, QRIS, EDC, API integration, regression testing and automation.",
+    desc: [
+      "Contributed to the development of internal applications for Bank BRI’s Head Office and Branch Offices, focusing on the Merchant Management System (MMS) to support operational efficiency.",
+      "Executed deployment processes for newly developed features and bug fixes, ensuring successful and stable rollout to staging and production environments.",
+      "Performed comprehensive manual testing, including System Integration Testing (SIT), User Acceptance Testing (UAT), Functional Testing, Regression Testing, and End-to-End (E2E) Testing for features with cross-module or business-critical impact.",
+      "Developed and maintained detailed test documentation, such as test scenarios, test cases, and technical notes to support quality assurance and continuous improvement.",
+      "Participated in regular coordination and alignment meetings with developers, QA teams, and project stakeholders to plan and evaluate sprint activities.",
+      "Utilized Agile methodologies throughout the development and QA lifecycle, ensuring iterative progress, early feedback, and collaborative team engagement."
+    ]
   },
 
   {
-    company: "E-Commerce Platform",
-    role: "QA Engineer",
-    desc: "Performed functional testing, API validation, UI testing and quality improvement for digital products.",
+    company: "ByteDance Technology Co., Ltd.",
+    role: "Software Quality Assurance Tester",
+    desc: [
+      "Conducted data integration testing between Tokopedia applications and TikTok Shop to ensure seamless synchronization and data consistency across platforms.",
+      "Performed functional and regression testing on delivery-related services such as BO/PLUS, free shipping vouchers, and visual delivery badges to verify correct implementation and user experience.",
+      "Involved in the migration of several key features from the Tokopedia platform to TikTok Shop, ensuring feature parity, functionality, and usability post-migration.",
+      "Utilized the Lark platform to create and manage test cases, maintain user story repositories, and track bugs or issues identified during the testing process.",
+      "Developed a strong understanding of the TikTok Shop ecosystem, focusing on buyer experience workflows, UI/UX behavior, and end-to-end user journey validation."
+    ]
   },
+
+  {
+    company: "PT GoTo Gojek Tokopedia Tbk (GoTo)",
+    role: "Software Quality Assurance Tester",
+    desc: [
+      "Reviewed and analyzed Product Requirement Documents (PRD) and Business Requirement Documents (BRD) to develop and execute effective testing strategies.",
+      "Designed and maintained detailed test documentation, including test cases, test scenarios, test plans, and execution reports tailored to project requirements.",
+      "Conducted comprehensive manual testing for web-based applications (desktop), Mobile Lite, Android, and iOS platforms to ensure optimal functionality and user experience.",
+      "Performed Smoke Testing, Regression Testing, and User Acceptance Testing (UAT) to validate product readiness and release quality.",
+      "Identified, documented, and reported software defects while collaborating with Product Managers, Software Engineers, and Developers to resolve issues efficiently.",
+      "Worked within Agile SDLC environments and utilized tools such as Jira, Confluence, Postman, Figma, Slack, Google Workspace, and Microsoft Office to support QA activities."
+    ]
+  }
 ];
 
 export default function Experience() {
@@ -104,29 +130,20 @@ text-gray-900
                 {item.company}
               </h3>
 
-              <p
-                className="
-text-sky-500
-
-font-medium
-
-mt-2
-"
-              >
-                {item.role}
-              </p>
-
-              <p
-                className="
+              <ul
+  className="
 mt-4
-
+list-disc
+pl-5
+space-y-2
 text-gray-600
-
 leading-relaxed
 "
-              >
-                {item.desc}
-              </p>
+>
+  {item.desc.map((descItem, idx) => (
+    <li key={idx}>{descItem}</li>
+  ))}
+</ul>
             </motion.div>
           ))}
         </div>

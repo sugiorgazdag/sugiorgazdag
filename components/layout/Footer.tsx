@@ -34,8 +34,6 @@ export default function Footer() {
           gap-5
         "
       >
-
-
         <div>
 
           <h3
@@ -46,7 +44,6 @@ export default function Footer() {
           >
             Galang Eka Wiyono
           </h3>
-
 
           <p
             className="
@@ -59,9 +56,6 @@ export default function Footer() {
           </p>
 
         </div>
-
-
-
 
         <div
           className="
@@ -80,12 +74,8 @@ export default function Footer() {
               transition
             "
           >
-
             <FaLinkedin size={22}/>
-
           </a>
-
-
 
           <a
             href="https://github.com/"
@@ -97,16 +87,9 @@ export default function Footer() {
               transition
             "
           >
-
             <FaGithub size={22}/>
-
           </a>
-
-
         </div>
-
-
-
 
         <p
           className="
@@ -114,14 +97,10 @@ export default function Footer() {
             text-gray-500
           "
         >
-
           © {new Date().getFullYear()} Galang Eka Wiyono
 
         </p>
-
-
       </div>
-
 
     </footer>
 
