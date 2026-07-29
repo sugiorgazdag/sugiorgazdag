@@ -23,22 +23,28 @@ export default function Contact() {
   const buttonClass = `
     flex
     items-center
+    justify-center
     gap-2
+
     rounded-full
-    bg-gray-50
+
+    bg-sky-500
+    text-white
     border
-    border-gray-200
+    border-sky-500
+
     px-6
     py-3
+
     font-medium
-    text-gray-700
+
     transition-all
     duration-300
+
     hover:-translate-y-1
     hover:scale-105
-    hover:bg-sky-500
-    hover:text-white
-    hover:border-sky-500
+    hover:bg-sky-600
+    hover:border-sky-600
     hover:shadow-xl
     hover:shadow-sky-300/50
   `;
@@ -159,12 +165,7 @@ export default function Contact() {
             "
           >
             <div className={infoCardClass}>
-              <p
-                className="
-                  text-sm
-                  text-gray-600
-                "
-              >
+              <p className="text-sm text-gray-600">
                 Email
               </p>
 
@@ -181,12 +182,7 @@ export default function Contact() {
             </div>
 
             <div className={infoCardClass}>
-              <p
-                className="
-                  text-sm
-                  text-gray-600
-                "
-              >
+              <p className="text-sm text-gray-600">
                 Availability
               </p>
 
